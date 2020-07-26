@@ -1,11 +1,11 @@
 import React from 'react';
 import '../css/custom.css'
-import useDarkMode from 'use-dark-mode';
-import '../../node_modules/font-awesome/css/font-awesome.min.css'; 
+import useDarkMode from 'use-dark-mode'
+import '../../node_modules/font-awesome/css/font-awesome.min.css' 
 import Toggle from 'react-toggle'
 
 const BigToggle = ({ checked, onChange }) => (
-  <span className="toggle-control switcher">
+  <span className="toggle-control switcher custom">
     <i className="fa fa-sun-o right-space" /> 
     <Toggle
           defaultChecked={checked}
@@ -27,4 +27,4 @@ const DarkModeToggle = () => {
   );
 };
 
-export default DarkModeToggle
+export { DarkModeToggle, BigToggle }

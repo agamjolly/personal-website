@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom'
 import Top from './components/Top.js'
 import About from './components/About.js'
 
-import DarkModeToggle from './components/Toggle.js'
+import Footer from './components/Footer.js'
+
+import { DarkModeToggle } from './components/Toggle.js'
 
 ReactDOM.render(
     (
@@ -13,6 +15,7 @@ ReactDOM.render(
         <DarkModeToggle />
         <Top />
         <About />
+        <Footer />
     </div>
     
     ),

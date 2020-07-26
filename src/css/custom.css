@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/*
+.toggle-fixed { 
+  top: 0;
+  position: sticky;
+}
+*/
 body.light-mode {
     background-color: #fff;
     color: #444452;
@@ -13,13 +18,12 @@ body.light-mode {
   }
 
 a { 
-    color: #03DAC5; 
-    font-weight: bolder;  
+    color: #03DAC5;   
     text-decoration: none;
     position: relative;
 }
 
-a:after {
+a:not(.no):after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -28,7 +32,7 @@ a:after {
     border-bottom: 2px solid #03DAC5;
     transition: 0.3s;
 }
-a:hover:after {
+a:not(.no):hover:after {
     width: 100%;
 }
 
@@ -39,6 +43,7 @@ a:hover:after {
 }
 
 .very-strong { 
+    font-weight: 400; 
     color: #03DAC5;
 }
 
@@ -46,6 +51,14 @@ a:hover:after {
     height: 100vh;
 }
 
+.second-container { 
+    /*margin-top: 10vw; */
+}
+@media screen and (max-height: 750px) { 
+    .second-container { 
+      margin-top: 10vw;
+    }  
+}
 .wave {
     animation-name: wave-animation;  
     animation-duration: 2.5s;        
@@ -67,15 +80,18 @@ a:hover:after {
 
 body { 
     font-family: 'Noto Sans JP', sans-serif; 
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05vh;
     color: #444452;
+    padding-left: 10%; 
+    padding-right: 10%;
 } 
-
+.fine-line { 
+  opacity: 100%;
+  background-color: #03DAC5;
+}
 
 .header {
     padding-top: 12.5%;
-    padding-left: 10%; 
-    padding-right: 10%;
     padding-bottom: 12.5%;
 }
 
@@ -259,11 +275,11 @@ body {
   }
 
   .react-toggle--checked .react-toggle-track {
-    background-color: #ffffff;
+    background-color: #4d4d4d;
   }
   
   .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-    background-color: #ffffff;
+    background-color: #4d4d4d;
   }
   
   .react-toggle-track-check {
@@ -336,11 +352,135 @@ body {
   
 .small-text { 
   /*text-shadow: -1px -1px 1px #03DAC5, 1px 1px 1px #000;*/
+
   color: #03DAC5;
   text-align:center;
   font-size: 100%;
-  font-weight: bolder;
+  font-weight: 700;
+  letter-spacing: 2px; 
   padding-top: 5%;
   padding-left: 10%;
   padding-right: 10%;
+}
+
+.picture-div { 
+  padding-top: 2.5%;
+  margin: auto;
+  padding-left: 0;
+}
+
+.picture { 
+  color: #171c28;
+  display: block; 
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  width: 17rem;
+  height: 17rem;
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 15px 35px, rgba(0, 0, 0, 0.1) 0px 5px 15px;
+  border-radius: 25%;
+}
+
+
+.picture-text { 
+text-shadow: 2px 8px 6px rgba(0,0,0,0.1),
+                 0px -5px 35px rgba(255,255,255,0.2);
+  text-align: center;
+  padding-top: 2%;
+  display: block; 
+  letter-spacing: -0rem;
+  margin: auto; 
+  font-size: 400%;
+  font-weight: 400;
+  padding-bottom: 1%;
+  margin: 0; 
+} 
+
+@media screen and (max-width: 900px) { 
+  .picture-div { 
+    padding-top: 10%;
+  }
+  .picture { 
+    width: 10rem; 
+    height: 10rem;
+  }
+  .picture-text { 
+    font-size: 2.5rem;
+    padding-top: 0.5rem;
+  } 
+
+}
+
+.no { 
+  font-size: 1.15rem;
+}
+
+.toolkit { 
+  margin: 0.2vw auto 0.2vw auto;
+  box-sizing: border-box;
+  display: flex;
+  /*box-shadow: 0.5px 0.5px 15px 2px rgba(0,0,0,0.75);*/
+  width: 200px;
+  height: 50px;
+  border: 1px solid #03DAC5;
+  padding: 10px 10px 10px 10px;
+  border-radius: 15px;
+  justify-content: space-around;
+}
+
+.about-heading { 
+    padding-top: 5%;
+    margin-right: 10vw;
+    color: #03DAC5;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.para-text { 
+  text-align: justify; 
+  font-size: larger;
+}
+
+.adjustment { 
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+@media screen and (max-width: 900px) { 
+  .adjustment { 
+    padding: 0;
+  }
+  .toolkit { 
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 175px;
+  }
+}
+.long { 
+  width: 50%;
+}
+.last-container { 
+  margin-top: 5vw;
+
+}
+@media screen and (max-height: 750px) { 
+  .last-container { 
+    margin-top: 10vw;
+  }  
+}
+
+hr.fine-line { 
+  opacity: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.footer-text {
+  text-align: center; 
+}
+
+@media screen and (max-width: 900px) { 
+  hr.fine-line { 
+    margin: 0;
+  }
 }
