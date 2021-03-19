@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import "../css/custom.css"
 import dp from "../static/dp.jpeg"
 import '../../node_modules/font-awesome/css/font-awesome.min.css'
+import Skills from "./Skills.js"
 
 import Toolkit from './Toolkit.js'
+
+// import 'react-tabs/style/react-tabs.css';
+
 
 class About extends Component { 
     render() { 
@@ -33,18 +37,21 @@ class About extends Component {
                             This summer, I am working at <a href="https://news.berkeley.edu/2020/01/30/boalt-hall-denamed/" target="_blank" rel="noopener noreferrer">UC Berkeley's <strike>Boalt</strike> School of Law</a> to create impactful distributed software used by alumni, faculty, and students at scale.
                         </p>    
                     </div>
+                    
+                    
+                    <div className="about-heading"> 
+                        {caps("skills")}
+                    </div>
+                    
+                    <Skills />
+        
+                    
                     <div className="about-heading"> 
                         {caps("work experience")}
                     </div>
-                    <div className="about-text">
-                        <p className="para-text" >
-                            Lorem ipsum dolor sit amet, eos ad affert eligendi conclusionemque. In dolorum erroribus eos. Vidit dicant vulputate ut pro, facete mollis ocurreret te nam. Cu pri choro luptatum instructior, at vix veniam munere contentiones, vis prima partem graeco eu. At possim mentitum copiosae nam. Usu probo habeao assum ad. Cu exerci commodo vix, enim omnium in usu.
+                    
+                    Hello world
 
-                            Pro no dolore constituto reprimique, eu vocent moderatius sed. Ut tempor aliquando abhorreant sit, sea suscipit constituam at, mel eu nemore habemus. Ad constituto definiebas pro. At vis iuvaret accumsan adipisci, vis ei etiam tibique scaevola. Has lobortis praesent tincidunt te, lorem iusto docendi has no.
-
-                            Regione facilisi periculis in est. At sed graece vidisse, eos et illum diceret reprimique. Mea tamquam lucilius platonem cu, saepe consulatu liberavisse et nec. In posse tamquam albucius mel, te mel dicant fabulas electram. Atqui veritus intellegat sed no, utroque dissentias et qui. Nibh partiendo interesset est ut, ad adhuc definiebas duo.
-                        </p>
-                    </div>
                 </div>
             </div>
         )
