@@ -5,14 +5,13 @@ import Top from './components/Top.js'
 import About from './components/About.js'
 import Projects from './components/Projects.js'
 import Footer from './components/Footer.js'
-
-import { DarkModeToggle } from './components/Toggle.js'
+import Header from './components/Header.js'
 
 ReactDOM.render(
     (
 
     <div>
-        <DarkModeToggle />
+        <Header />
         <Top />
         <About />
         <Projects />
@@ -22,3 +21,7 @@ ReactDOM.render(
     ),
     document.getElementById('root')
 )
+
+/**
+ * 
+ */
